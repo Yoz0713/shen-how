@@ -1,7 +1,6 @@
 {
   "name": "company-website",
   "version": "0.1.0",
-  "homepage": "https://Yoz0713.github.io/shen-how",
   "private": true,
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
