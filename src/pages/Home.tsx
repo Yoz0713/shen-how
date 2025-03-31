@@ -3,15 +3,25 @@ import { easeInOut, motion } from 'framer-motion';
 import '../styles/Home.scss';
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 10 },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
       duration: 0.8,
-      type: "spring",
-      stiffness: 100,
-      damping: 15
+      ease: [0.4, 0, 0.2, 0.6],
+      opacity: { 
+        duration: 0.6,
+        ease: [0.4, 0, 0.2, 0.6]
+      }
+    }
+  },
+  exit: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: [0.4, 0, 0.2, 0.6]
     }
   }
 };
@@ -23,7 +33,16 @@ const staggerContainer = {
     transition: {
       staggerChildren: 0.2,
       delayChildren: 0.1,
-      when: "beforeChildren"
+      when: "beforeChildren",
+      ease: [0.4, 0, 0.2, 1]
+    }
+  },
+  exit: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      when: "afterChildren",
+      ease: [0.4, 0, 0.2, 1]
     }
   }
 };
@@ -101,8 +120,9 @@ const Home: React.FC = () => {
         className="about-section"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px", amount: 0.2 }}
+        viewport={{ once: true, margin: "-50px", amount: 0.35 }}
         variants={staggerContainer}
+        style={{ willChange: "transform, opacity" }}
       >
         <div className="container">
           <motion.h2 variants={fadeInUp}>關於我們</motion.h2>
@@ -119,8 +139,9 @@ const Home: React.FC = () => {
         className="features-section"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px", amount: 0.2 }}
+        viewport={{ once: true, margin: "-50px", amount: 0.35 }}
         variants={staggerContainer}
+        style={{ willChange: "transform, opacity" }}
       >
         <div className="container">
           <motion.h2 variants={fadeInUp}>核心技術</motion.h2>
@@ -154,8 +175,9 @@ const Home: React.FC = () => {
         className="applications-section"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px", amount: 0.2 }}
+        viewport={{ once: true, margin: "-50px", amount: 0.35 }}
         variants={staggerContainer}
+        style={{ willChange: "transform, opacity" }}
       >
         <div className="container">
           <motion.h2 variants={fadeInUp}>應用領域</motion.h2>
