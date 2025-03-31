@@ -103,7 +103,6 @@ const Home: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px", amount: 0.2 }}
         variants={staggerContainer}
-        animate="visible"
       >
         <div className="container">
           <motion.h2 variants={fadeInUp}>關於我們</motion.h2>
@@ -122,7 +121,6 @@ const Home: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px", amount: 0.2 }}
         variants={staggerContainer}
-        animate="visible"
       >
         <div className="container">
           <motion.h2 variants={fadeInUp}>核心技術</motion.h2>
@@ -158,7 +156,6 @@ const Home: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px", amount: 0.2 }}
         variants={staggerContainer}
-        animate="visible"
       >
         <div className="container">
           <motion.h2 variants={fadeInUp}>應用領域</motion.h2>
