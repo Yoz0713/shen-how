@@ -10,7 +10,8 @@ const fadeInUp = {
     transition: {
       duration: 0.8,
       type: "spring",
-      stiffness: 100
+      stiffness: 100,
+      damping: 15
     }
   }
 };
@@ -20,8 +21,9 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3,
-      delayChildren: 0.2
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+      when: "beforeChildren"
     }
   }
 };
@@ -101,6 +103,7 @@ const Home: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px", amount: 0.2 }}
         variants={staggerContainer}
+        animate="visible"
       >
         <div className="container">
           <motion.h2 variants={fadeInUp}>關於我們</motion.h2>
@@ -119,6 +122,7 @@ const Home: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px", amount: 0.2 }}
         variants={staggerContainer}
+        animate="visible"
       >
         <div className="container">
           <motion.h2 variants={fadeInUp}>核心技術</motion.h2>
@@ -154,6 +158,7 @@ const Home: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px", amount: 0.2 }}
         variants={staggerContainer}
+        animate="visible"
       >
         <div className="container">
           <motion.h2 variants={fadeInUp}>應用領域</motion.h2>
