@@ -1,0 +1,130 @@
+.history {
+  .history-header {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+
+  .history-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .timeline {
+    position: relative;
+    padding: 2rem 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #007bff;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media (max-width: 768px) {
+        left: 30px;
+      }
+    }
+
+    .timeline-item {
+      margin-bottom: 3rem;
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+
+        .timeline-year {
+          margin-left: 0;
+          margin-right: -60px;
+
+          @media (max-width: 768px) {
+            margin-right: 0;
+            margin-left: -60px;
+          }
+        }
+
+        .timeline-content {
+          margin-right: 3rem;
+          margin-left: 0;
+          text-align: right;
+
+          @media (max-width: 768px) {
+            margin-right: 0;
+            margin-left: 3rem;
+            text-align: left;
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: row !important;
+      }
+
+      .timeline-year {
+        width: 100px;
+        height: 100px;
+        background-color: #007bff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left: -60px;
+        z-index: 1;
+
+        @media (max-width: 768px) {
+          width: 60px;
+          height: 60px;
+          font-size: 1rem;
+          margin-left: 0;
+        }
+      }
+
+      .timeline-content {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-left: 3rem;
+        flex: 1;
+
+        @media (max-width: 768px) {
+          margin-left: 2rem;
+        }
+
+        h2 {
+          font-size: 1.8rem;
+          color: #333;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          color: #666;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+} 

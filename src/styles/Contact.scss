@@ -1,0 +1,123 @@
+.contact-page {
+  padding-top: 80px;
+
+  .contact-hero {
+    height: calc(100vh - 80px);
+
+    .contact-header {
+      background-color: #f8f9fa;
+      padding: 3rem 0;
+      text-align: center;
+      margin-bottom: 3rem;
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #666;
+      }
+    }
+
+    .contact-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        .info-item {
+          margin-bottom: 2rem;
+
+          h3 {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            color: #666;
+            margin-bottom: 0.3rem;
+          }
+        }
+      }
+
+      .contact-form {
+        h2 {
+          font-size: 1.8rem;
+          color: #333;
+          margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+          margin-bottom: 1.5rem;
+
+          label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+          }
+
+          input,
+          textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+
+            &:focus {
+              outline: none;
+              border-color: #007bff;
+            }
+          }
+        }
+
+        .submit-btn {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          padding: 0.8rem 2rem;
+          font-size: 1rem;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
+    }
+  }
+
+  .map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .map {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      height: 450px;
+    }
+  }
+} 
