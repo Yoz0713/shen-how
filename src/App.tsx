@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -8,8 +8,20 @@ import History from './pages/History';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import PowerAnalysis from './pages/PowerAnalysis';
 import Loading from './components/Loading';
+import Nanocrystal from './pages/Nanocrystal';
 import './styles/App.scss';
+
+const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -81,6 +93,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
+      <ScrollToTop />
       {isLoading && (
         <div className={`loading-container ${showFadeOut ? 'fade-out' : ''}`}>
           <Loading progress={progress} />
@@ -96,6 +109,8 @@ const App: React.FC = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            <Route path="/power-analysis" element={<PowerAnalysis />} />
+            <Route path="/nanocrystal" element={<Nanocrystal />} />
           </Routes>
         </main>
         <Footer />

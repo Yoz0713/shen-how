@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Products.scss';
 
 const fadeInUp = {
@@ -72,6 +73,7 @@ const features = [
 ];
 
 const Products: React.FC = () => {
+  const navigate = useNavigate();
   const [[page, direction], setPage] = useState([0, 0]);
 
   const paginate = (newDirection: number) => {
@@ -120,11 +122,11 @@ const Products: React.FC = () => {
                 <li>延長設備使用壽命</li>
                 <li>環保無毒，符合國際標準</li>
               </ul>
-              <button className="contact-btn">了解更多</button>
+              <button className="contact-btn" onClick={() => navigate('/nanocrystal')}>了解更多</button>
             </motion.div>
             <motion.div className="image-content" variants={fadeInUp}>
               <img 
-                src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                src="/images/product1.jpg" 
                 alt="導電型奈米超晶體" 
                 loading="eager"
               />
@@ -137,15 +139,14 @@ const Products: React.FC = () => {
         className="power-analysis-section"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px", amount: 0.35 }}
+        viewport={{ once: true, margin: "-50px", amount: 0.2 }}
         variants={staggerContainer}
-        style={{ willChange: "transform, opacity" }}
       >
         <div className="container">
           <motion.div className="section-content" variants={staggerContainer}>
             <motion.div className="image-content" variants={fadeInUp}>
               <img 
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
                 alt="電力品質分析" 
                 loading="eager"
               />
@@ -160,7 +161,7 @@ const Products: React.FC = () => {
                 <li>降低能源消耗成本</li>
                 <li>提升設備使用壽命</li>
               </ul>
-              <button className="contact-btn">立即諮詢</button>
+              <button className="contact-btn" onClick={() => navigate('/power-analysis')}>了解更多</button>
             </motion.div>
           </motion.div>
         </div>
