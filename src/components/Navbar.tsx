@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
           </button>
           <div className="menu-header">
             <Link to="/" className="menu-logo" onClick={closeMenu}>
-              <span>盛浩科技</span>
+              <span>浩盛科技</span>
             </Link>
             
           </div>
@@ -76,15 +76,15 @@ const Navbar: React.FC = () => {
           <li className="nav-item">
             <Link to="/news" className="nav-link" onClick={closeMenu}>
               <i className="menu-icon">📰</i>
-              <span>新聞</span>
+              <span>實績</span>
             </Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link to="/history" className="nav-link" onClick={closeMenu}>
               <i className="menu-icon">📜</i>
               <span>歷史</span>
             </Link>
-          </li>
+          </li> */}
           <li className="nav-item">
             <Link to="/products" className="nav-link" onClick={closeMenu}>
               <i className="menu-icon">🛒</i>

@@ -103,8 +103,12 @@ const Nanocrystal: React.FC = () => {
         <motion.section className="card-section" variants={fadeInUp}>
           <div className="card-container">
             <motion.div className="card" variants={fadeInUp}>
-              <h2>使用限制</h2>
-              <p>本產品未經測試或聲明適用於醫療或藥用。</p>
+              <h2>導電型奈米超晶體的優勢</h2>
+              <p>「增加電力品質、增加有效電力」<br />
+                「提高發電能力、減少衰退率」<br />
+                「逆變器送電量增加」<br />
+                「長期保 持」
+            </p>
             </motion.div>
             <motion.div className="card" variants={fadeInUp}>
               <h2>包裝</h2>

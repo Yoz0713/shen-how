@@ -106,7 +106,7 @@ const Products: React.FC = () => {
         className="nano-crystal-section"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px", amount: 0.35 }}
+        viewport={{ once: true, margin: "-50px", amount: 0.25 }}
         variants={staggerContainer}
         style={{ willChange: "transform, opacity" }}
       >
@@ -139,7 +139,7 @@ const Products: React.FC = () => {
         className="power-analysis-section"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px", amount: 0.2 }}
+        viewport={{ once: true, margin: "-50px", amount: 0.25 }}
         variants={staggerContainer}
       >
         <div className="container">
@@ -171,7 +171,7 @@ const Products: React.FC = () => {
         className="features-section"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px", amount: 0.35 }}
+        viewport={{ once: true, margin: "-50px", amount: 0.25 }}
         variants={staggerContainer}
         style={{ willChange: "transform, opacity" }}
       >

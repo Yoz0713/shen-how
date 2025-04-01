@@ -120,7 +120,7 @@ const Home: React.FC = () => {
         className="about-section"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px", amount: 0.35 }}
+        viewport={{ once: true, margin: "-50px", amount: 0.25 }}
         variants={staggerContainer}
         style={{ willChange: "transform, opacity" }}
       >
@@ -139,7 +139,7 @@ const Home: React.FC = () => {
         className="features-section"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px", amount: 0.35 }}
+        viewport={{ once: true, margin: "-50px", amount: 0.25 }}
         variants={staggerContainer}
         style={{ willChange: "transform, opacity" }}
       >
@@ -175,7 +175,7 @@ const Home: React.FC = () => {
         className="applications-section"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px", amount: 0.35 }}
+        viewport={{ once: true, margin: "-50px", amount: 0.25 }}
         variants={staggerContainer}
         style={{ willChange: "transform, opacity" }}
       >

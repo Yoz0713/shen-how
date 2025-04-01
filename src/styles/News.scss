@@ -21,7 +21,7 @@
 
   
   .news-container {
-    max-width: 1200px;
+    max-width: 850px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -30,74 +30,85 @@
 
   .news-item {
     display: flex;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-    
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
-  }
-
-  .news-image {
-    flex: 0 0 40%;
-    
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    
-    @media (max-width: 768px) {
-      height: 200px;
-    }
-  }
-
-  .news-content {
-    flex: 1;
-    padding: 1.5rem;
-    display: flex;
     flex-direction: column;
-    
-    h2 {
-      font-size: 1.6rem;
-      color: #333;
-      margin-bottom: 0.5rem;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .news-image {
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 500px;
+      }
     }
-    
-    .news-date {
-      font-size: 0.9rem;
-      color: #888;
-      margin-bottom: 1rem;
-    }
-    
-    .news-summary {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #555;
-      margin-bottom: 1.5rem;
-    }
-    
-    .read-more {
-      align-self: flex-start;
-      padding: 0.6rem 1.2rem;
-      background-color: #3498db;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 500;
-      transition: background-color 0.3s ease;
-      
-      &:hover {
-        background-color: #2980b9;
+
+    .news-content {
+      padding: 1.5rem;
+
+      h2 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+      .news-date {
+        font-size: 1rem;
+        color: #999;
+        margin-bottom: 1rem;
+      }
+      .news-summary {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .news-list {
+        display: flex;
+        flex-wrap: wrap; /* 允許換行 */
+        gap: 1rem; /* 卡片之間的間距 */
+        margin: 1rem 0;
+        padding: 0;
+        list-style: none; /* 移除預設的列表樣式 */
+
+        li {
+          flex: 1 1 calc(33.333% - 1rem); /* 每行顯示三個卡片，間距計算在內 */
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 1rem;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          letter-spacing: 0.1rem;
+          line-height: 1.8rem;
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+          }
+
+          p {
+            margin: 0;
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+          }
+        }
+
+        @media (max-width: 768px) {
+          li {
+            flex: 1 1 calc(50% - 1rem); /* 手機版每行顯示兩個卡片 */
+          }
+        }
+
+        @media (max-width: 480px) {
+          li {
+            flex: 1 1 100%; /* 小螢幕每行顯示一個卡片 */
+          }
+        }
       }
     }
   }
@@ -117,4 +128,4 @@
       grid-template-columns: 1fr;
     }
   }
-} 
+}
