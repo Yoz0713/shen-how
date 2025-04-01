@@ -40,6 +40,10 @@
       text-shadow: 0 2px 4px rgba(182, 182, 182, 0.6);
       background-color: #ffffffc3;
       padding: 1rem 2rem;
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+        
+      }
     }
   }
 
@@ -69,10 +73,12 @@
       gap: 2rem;
 
       .section-image {
-        flex: 1;
         max-width: 50%;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       height: auto;
+        width: 100%;
+        object-fit: cover;
       }
 
       .text-content {
