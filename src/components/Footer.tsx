@@ -8,19 +8,18 @@ const Footer: React.FC = () => {
         <div className="footer-content">
           <div className="footer-section">
             <h3>聯絡資訊</h3>
-            <p>電話：(02) 1234-5678</p>
-            <p>地址：台北市某區某路123號</p>
-            <p>Email：contact@company.com</p>
+            <p>電話：0935328498</p>
+            <p>地址：桃園市八德區永福街126號</p>
+            <p>Email：samprasfong@gmail.com</p>
           </div>
           <div className="footer-section">
             <h3>營業時間</h3>
             <p>週一至週五：9:00 - 18:00</p>
-            <p>週六：10:00 - 15:00</p>
-            <p>週日：休息</p>
+            <p>週六日：休息</p>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 公司名稱. All rights reserved.</p>
+          <p>&copy; 2024 浩盛. All rights reserved.</p>
         </div>
       </div>
     </footer>
