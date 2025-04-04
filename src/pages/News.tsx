@@ -54,11 +54,11 @@ const News: React.FC = () => {
               className="news-list" 
               variants={staggerContainer}
             >
-              <motion.li variants={fadeInUp}>A案場最低發電率由57%提升至70%，五年後仍維持高效能。</motion.li>
-              <motion.li variants={fadeInUp}>B、C案場發電量分別提高約3.5%與3.7%。</motion.li>
-              <motion.li variants={fadeInUp}>E、F案場提升率達4.97%~7.03%。</motion.li>
-              <motion.li variants={fadeInUp}>I案場施工後發電量增長15%。</motion.li>
-              <motion.li variants={fadeInUp}>J案場在極端天氣下仍能提升10%以上，最高達33.66%。</motion.li>
+              <motion.li variants={fadeInUp}>A案場:最低發電率由57%提升至70%，五年後仍維持高效能。</motion.li>
+              <motion.li variants={fadeInUp}>B、C案場:發電量分別提高約3.5%與3.7%。</motion.li>
+              <motion.li variants={fadeInUp}>E、F案場:提升率達4.97%~7.03%。</motion.li>
+              <motion.li variants={fadeInUp}>I案場:施工後發電量增長15%。</motion.li>
+              <motion.li variants={fadeInUp}>J案場:在極端天氣下仍能提升10%以上，最高達33.66%。</motion.li>
             </motion.ul>
             <p className="news-summary">
               整體數據顯示，奈米超晶體能有效改善接點電性，減少發熱與氧化，並在高溫環境下展現更佳效果，平均提升發電量8.3%，確保系統穩定運行，優於傳統導電膏技術。
