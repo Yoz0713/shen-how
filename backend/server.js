@@ -31,12 +31,12 @@ app.post('/send-email', async (req, res) => {
 
   // 配置郵件選項
   const mailOptions = {
-    from: process.env.GMAIL_USER, // 發件人
+    from: email, // 發件人
     to: 'charlesyou1234567@gmail.com', // 收件人
-    subject: `來自浩盛官網-填寫人:${name}`,
-    text:  `有人透過官網的聯絡表單來信！\r\r\r
-    以下為訊息內容：\r
-    ${message} `,
+    subject: `來自浩盛官網`,
+    text:  `${name}透過官網的聯絡表單來信！\r\r\r
+    寄件人地址:${email}
+    以下為訊息內容：\r${message} `,
   };
 
   // 發送郵件
