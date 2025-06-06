@@ -33,7 +33,39 @@ const News: React.FC = () => {
         <p>了解我們的里程碑</p>
       </div>
       <div className="news-container">
-        {/* 第一個 news-item */}
+        {/* 最新的 news-item */}
+        <motion.div 
+          className="news-item" 
+          variants={fadeInUp}
+        >
+          <div className="news-image">
+            <img 
+              src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop" 
+              alt="專利核准審定書" 
+            />
+          </div>
+          <div className="news-content">
+            <h2>降低寄生電感或寄生電容的方法及導電塗料之用途專利核准</h2>
+            <p className="news-date">2025年04月01日</p>
+            <p className="news-summary">
+              經濟部智慧財產局已正式核准浩盛科技有限公司提出的「降低寄生電感或寄生電容的方法及導電塗料之用途」專利申請。
+            </p>
+            <motion.ul 
+              className="news-list" 
+              variants={staggerContainer}
+            >
+              <motion.li variants={fadeInUp}>核心技術：專利涉及降低電子元件中的寄生電感或寄生電容的方法，以及導電塗料的創新應用。</motion.li>
+              <motion.li variants={fadeInUp}>技術領域：包含導電塗料(C09D 5/24)、開關技術(H01H 13/785)、導電材料(H01B 1/24)等多個領域。</motion.li>
+              <motion.li variants={fadeInUp}>商業價值：技術可應用於物聯網、5G通訊、電動車等新興領域，具有廣闊的市場前景。</motion.li>
+              <motion.li variants={fadeInUp}>創新認可：專利的核准標誌著公司在電子產業技術創新方面的重要里程碑。</motion.li>
+            </motion.ul>
+            <p className="news-summary">
+              此專利核准不僅是對本公司的認可，也為公司在電子產業的發展奠定了堅實的智慧財產基礎，展現了公司在提升電子產品性能方面的技術實力。
+            </p>
+          </div>
+        </motion.div>
+
+        {/* 原有的第一個 news-item */}
         <motion.div 
           className="news-item" 
           variants={fadeInUp}

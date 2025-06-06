@@ -1,0 +1,108 @@
+.contact-page {
+  padding: 2rem;
+  background: #ffffff;
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+  margin-top: 35px;
+}
+.contact-page .contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contact-page .contact-header h1 {
+  font-size: 2.5rem;
+  color: #0078d7;
+}
+.contact-page .contact-header p {
+  font-size: 1.2rem;
+  color: #666666;
+}
+.contact-page .contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .contact-page .contact-container {
+    flex-direction: column;
+  }
+}
+.contact-page .contact-container .contact-image {
+  display: flex;
+  justify-content: center;
+  flex: 0.8;
+}
+.contact-page .contact-container .contact-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.contact-page .contact-container .contact-form {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.contact-page .contact-container .contact-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0078d7;
+}
+.contact-page .contact-container .contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+.contact-page .contact-container .contact-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #333333;
+}
+.contact-page .contact-container .contact-form .form-group input,
+.contact-page .contact-container .contact-form .form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #333333;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.contact-page .contact-container .contact-form .form-group input:focus,
+.contact-page .contact-container .contact-form .form-group textarea:focus {
+  border-color: #0078d7;
+}
+.contact-page .contact-container .contact-form .form-group.recaptcha {
+  display: flex;
+  justify-content: center;
+}
+.contact-page .contact-container .contact-form .submit-button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: #0078d7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.contact-page .contact-container .contact-form .submit-button:hover {
+  background: #005bb5;
+}
+.contact-page .contact-container .contact-form .submit-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+.contact-page .contact-container .contact-form .status-message {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #28a745;
+}
+.contact-page .contact-container .contact-form .status-message.error {
+  color: #dc3545;
+}
