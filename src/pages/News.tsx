@@ -40,7 +40,7 @@ const News: React.FC = () => {
         >
           <div className="news-image">
             <img 
-              src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop" 
+              src="/images/tipo.jpg" 
               alt="專利核准審定書" 
             />
           </div>
